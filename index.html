@@ -7,11 +7,19 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div>
-        <textarea id="inputText" rows="4" cols="50" placeholder="e.g. 1-Hello"></textarea>
-        <button onclick="generateBoxes()">Generate</button>
+    
+    <div id="inputSection">
+        <div class="textarea-container">
+            <textarea id="inputText" rows="4" placeholder="e.g. 1-Hello"></textarea>
+            <button class="button" onclick="generateBoxes()">Generate</button>
+        </div>
     </div>
-    <div id="outputContainer"></div>
+    
+    <div id="chartSection" style="display: none;">
+        <button class="back-button" onclick="showInput()">Back</button>
+        <div id="outputContainer"></div>
+    </div>
+    
     <script src="script.js"></script>
 </body>
-</html>
+ </html>

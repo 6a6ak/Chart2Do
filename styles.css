@@ -1,3 +1,15 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    /* Add these styles to center everything in the body */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
 .box {
     padding: 10px;
     border: 2px solid black;
@@ -19,4 +31,76 @@
 .line {
     text-align: center;
     margin-bottom: 20px;
+}
+
+.text-strike {
+    text-decoration: line-through;
+    color: red;
+}
+
+.button {
+    background-color: #007BFF;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: block; /* This ensures the button sits below the textarea */
+    margin-top: 10px;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+/* This style ensures the textarea and button combination has a white background and is neatly padded */
+.textarea-container {
+    background-color: #688796;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width:600px;
+}
+textarea {
+    width: 90%; /* It will occupy the full width of its container */
+    max-width: 600px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    resize: vertical;
+}
+.back-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #007BFF;
+    color: #ffffff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.back-button:hover {
+    background-color: #0056b3;
+}
+@media (max-width: 768px) {
+    /* Adjust textarea and container width for small screens */
+    .textarea-container {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    textarea {
+        width: 100%;
+    }
+
+    .back-button, .button {
+        padding: 5px 15px;  /* Adjust padding for buttons */
+        font-size: 14px;   /* Reduce font size for buttons */
+    }
 }
