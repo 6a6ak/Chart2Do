@@ -1,5 +1,5 @@
 # Chart2Do
-make a chart from the text 
+Make a chart from text 
 example:
 
 1-Hello
