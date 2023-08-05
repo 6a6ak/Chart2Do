@@ -1,3 +1,10 @@
+function getRandomColor() {
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+    return `rgb(${r}, ${g}, ${b})`;
+}
+
 function generateBoxes() {
     const input = document.getElementById('inputText').value.trim();
     const lines = input.split("\n").filter(line => line.trim() !== "");
@@ -26,6 +33,9 @@ function generateBoxes() {
 
             const box = document.createElement('div');
             box.className = 'box';
+            
+            // Set random border color for the box
+            box.style.borderColor = getRandomColor();
 
             const boxContent = document.createElement('span');
             boxContent.textContent = `${num}- ${t}`;
@@ -45,11 +55,11 @@ function generateBoxes() {
             outputContainer.appendChild(arrow);
         }
     });
-       // After generating boxes, hide input section and show chart section
-       document.getElementById('inputSection').style.display = 'none';
-       document.getElementById('chartSection').style.display = 'block';
+    
+    // After generating boxes, hide input section and show chart section
+    document.getElementById('inputSection').style.display = 'none';
+    document.getElementById('chartSection').style.display = 'block';
 }
-
 
 function showInput() {
     // Show the input section and hide the chart section
