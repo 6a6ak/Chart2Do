@@ -5,6 +5,7 @@ function getRandomColor() {
     return `rgb(${r}, ${g}, ${b})`;
 }
 
+
 function generateBoxes() {
     const input = document.getElementById('inputText').value.trim();
     const lines = input.split("\n").filter(line => line.trim() !== "");
@@ -60,6 +61,7 @@ function generateBoxes() {
     document.getElementById('inputSection').style.display = 'none';
     document.getElementById('chartSection').style.display = 'block';
 }
+
 
 function showInput() {
     // Show the input section and hide the chart section
