@@ -1,5 +1,5 @@
 # Chart2Do
-Make a chart from text 
+Make a chart from the text 
 example:
 
 1-Hello
@@ -10,4 +10,4 @@ example:
 
 4-Level4
 
-![Image Description](sch.PNG)
+![What it looks like ](sch.PNG)
